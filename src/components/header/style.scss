@@ -1,4 +1,5 @@
 @import 'scss/colors.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 .main-header {
 
@@ -8,9 +9,13 @@
 
   .col {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 
   h1 {
@@ -18,12 +23,16 @@
     color: #fff;
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     margin: 0;
     line-height: .8;
 
     strong {
       font-weight: 700;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.5rem;
     }
   }
 
