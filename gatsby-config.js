@@ -8,20 +8,6 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/posts/`,
-        name: 'posts',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/images/`,
-        name: 'images',
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

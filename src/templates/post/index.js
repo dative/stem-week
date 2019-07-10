@@ -5,8 +5,6 @@ import React from 'react'
 import get from 'lodash/get'
 import map from 'lodash/map'
 
-import Adsense from 'components/adsense'
-
 import './style.scss'
 
 const Post = ({ data, options }) => {

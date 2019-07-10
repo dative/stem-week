@@ -2,7 +2,8 @@ import React from 'react'
 import emergence from 'emergence.js'
 
 import Header from 'components/header'
-import Footer from 'components/footer'
+import EventsViewer from 'components/eventsViewer'
+import Sidebar from 'components/sidebar'
 import { siteMetadata } from '../../../gatsby-config'
 
 import 'modern-normalize/modern-normalize.css'
@@ -10,7 +11,7 @@ import 'prismjs/themes/prism.css'
 import 'scss/gatstrap.scss'
 import 'animate.css/animate.css'
 import 'font-awesome/css/font-awesome.css'
-
+import './style.scss'
 class Layout extends React.Component {
   componentDidMount() {
     emergence.init()
@@ -25,8 +26,16 @@ class Layout extends React.Component {
     return (
       <div>
         <Header title={siteMetadata.title} {...this.props} />
-        {children}
-        <Footer title={siteMetadata.title} author={siteMetadata.author} />
+        <div className="container main-container">
+          <div className="row">
+            <div className="col-12 col-lg-8">
+              <EventsViewer />
+            </div>
+            <div className="col-12 col-lg-4">
+              <Sidebar />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
