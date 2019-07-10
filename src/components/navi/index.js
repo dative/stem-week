@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import './style.scss'
 
 class Navi extends React.Component {
   render() {

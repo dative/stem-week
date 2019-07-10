@@ -1,11 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
-    adsense: '',
+    title: `Cape Cod STEM Week`,
+    description: `Focus on STEM education during week in October aimed at sparking student interest and knowledge.`,
+    author: `@webrgp`,
+    siteUrl: 'https://stem-week.netlify.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -62,11 +60,6 @@ module.exports = {
           {
             src: '/img/android-chrome-192x192.png',
             sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
             type: 'image/png',
           },
         ],

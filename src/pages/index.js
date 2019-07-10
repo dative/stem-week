@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} />
-      {posts.map(({ post }, i) => (
+      {/* {posts.map(({ post }, i) => (
         <Post
           data={post}
           options={{
@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
           }}
           key={i}
         />
-      ))}
+      ))} */}
     </Layout>
   )
 }
@@ -34,8 +34,6 @@ export const pageQuery = graphql`
         description
         url: siteUrl
         author
-        twitter
-        adsense
       }
     }
     remark: allMarkdownRemark(
