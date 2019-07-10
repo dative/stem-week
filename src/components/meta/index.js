@@ -9,11 +9,6 @@ const Meta = ({ site, title }) => {
     <Helmet
       title={title}
       meta={[
-        { name: 'twitter:card', content: 'summary' },
-        {
-          name: 'twitter:site',
-          content: `@${get(site, 'twitter')}`,
-        },
         { property: 'og:title', content: title },
         { property: 'og:type', content: 'website' },
         {
