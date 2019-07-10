@@ -15,7 +15,7 @@ class Header extends React.Component {
                   Cape Cod <strong>STEM Week</strong>
                 </h1>
               </Link>
-              <time datetime="2019-10-21/2019-10-25">OCT 21-25, 2019</time>
+              <time dateTime="2019-10-21/2019-10-25">OCT 21-25, 2019</time>
             </div>
           </div>
         </div>
