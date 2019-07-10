@@ -11,6 +11,16 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} />
+      <div className="container">
+        <div className="row">
+          <div className="col col-lg-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            tempore excepturi veritatis amet nobis vitae impedit animi,
+            similique accusantium. Assumenda possimus ut, voluptatem repudiandae
+            quis corrupti. Sunt obcaecati voluptate non?
+          </div>
+        </div>
+      </div>
       {/* {posts.map(({ post }, i) => (
         <Post
           data={post}
