@@ -23,7 +23,7 @@ $theme-colors: (
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-rounded: true !default;
+$enable-rounded: false !default;
 $enable-shadows: true !default;
 $enable-gradients: false !default;
 $enable-transitions: false !default;
@@ -38,8 +38,7 @@ $enable-print-styles: true !default;
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px
+  lg: 960px
 ) !default;
 
 // Body
@@ -82,10 +81,5 @@ p {
 }
 
 img {
-  margin-bottom: 15px;
   max-width: 100%;
-}
-
-img:hover {
-  animation: pulse 0.5s;
 }
