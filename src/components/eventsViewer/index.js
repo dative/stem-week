@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faList, faMap } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
 
 class EventsViewer extends React.Component {
@@ -6,8 +8,12 @@ class EventsViewer extends React.Component {
     return (
       <div className="events-viewer">
         <nav className="events-viewer--nav">
-          <button>List View</button>
-          <button>Map View</button>
+          <button className="active">
+            <FontAwesomeIcon icon={faList} /> List View
+          </button>
+          <button>
+            <FontAwesomeIcon icon={faMap} /> Map View
+          </button>
         </nav>
       </div>
     )
