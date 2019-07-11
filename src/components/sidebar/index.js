@@ -1,17 +1,26 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import './style.scss'
 const Sidebar = ({ data }) => {
   console.log(data)
   return (
-    <div>
-      <a href="https://capecodstemnetwork.org/submit-an-event">
+    <aside className="sidebar">
+      <a
+        className="btn btn-danger btn-block"
+        href="https://capecodstemnetwork.org/submit-an-event"
+      >
         Add Your Event!
       </a>
 
       <p>BROUGHT TO YOU BY:</p>
 
-      {/* <Img fixed={profile} /> */}
-    </div>
+      <a href="https://capecodstemnetwork.org" target="_blank">
+        <img src="/img/stem-logo.svg" alt="Cape Cod STEM Network Logo" />
+      </a>
+
+      <a href="https://www.massstemweek.org/" target="_blank">
+        <img src="/img/mass-logo.svg" alt="Mass STEM Week Logo" />
+      </a>
+    </aside>
   )
 }
 

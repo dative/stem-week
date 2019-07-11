@@ -1,0 +1,31 @@
+@import 'scss/fonts.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+aside.sidebar {
+  margin-top: 1rem;
+  text-align: center;
+  a.btn {
+    font-family: $font-family-monospace;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+  }
+
+  p {
+    margin: 1rem 0 0;
+    font-family: $font-family-monospace;
+    font-weight: 500;
+    font-size: .9rem;
+
+    @include media-breakpoint-up(lg) {
+      margin: 2rem 0 0;
+    }
+  }
+
+  img {
+    width: 80%;
+    margin: 1rem auto;
+    @include media-breakpoint-up(lg) {
+      margin: 2rem auto;
+    }
+  }
+}
