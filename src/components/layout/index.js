@@ -28,10 +28,10 @@ class Layout extends React.Component {
         <Header title={siteMetadata.title} {...this.props} />
         <div className="container main-container">
           <div className="row">
-            <div className="col-12 col-lg-8">
+            <div className="col-12 col-lg-9">
               <EventsViewer />
             </div>
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-lg-3">
               <Sidebar />
             </div>
           </div>
