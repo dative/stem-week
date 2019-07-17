@@ -9,25 +9,27 @@
   min-height: 10rem;
 
   &--nav {
-    position: relative;
     background-color: #fff;
-    padding: 1rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
+    padding: 1rem;
+    position: sticky;
+    top: 0px;
+    z-index: 99999;
 
     @include media-breakpoint-up(md) {
       justify-content: flex-end;
     }
 
     button {
+      background:none;
+      border:none;
+      color:inherit;
+      cursor: pointer;
       font-family: $font-family-monospace;
       font-weight: bold;
-      background:none;
-      color:inherit;
-      border:none;
-      cursor: pointer;
       opacity: .5;
       &.active {
         opacity: 1;
@@ -47,21 +49,17 @@
     background-color: #f0f0f0;
 
     &--heading {
+      align-items: center;
+      background-color: #fff;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      background-color: #fff;
       margin: 0;
       padding: 1.25rem 1rem;
 
       button {
         @extend .btn;
         @include button-variant($red, #fff);
-        // background:none;
-        // color:inherit;
-        // border:none;
-        // cursor: pointer;
       }
     }
   }
