@@ -8,3 +8,7 @@ Cape Cod STEM Network website for Stem Week
 
 develop
 `gatsby develop`
+
+## Caveats
+
+The site is using some Font Awesome Pro icons, and it requires your pro token to be installed on your machine. For more, [read here](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
