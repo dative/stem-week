@@ -1,12 +1,12 @@
 import React from 'react'
 import './style.scss'
-const Sidebar = ({ data }) => {
-  console.log(data)
+const Sidebar = () => {
   return (
     <aside className="sidebar">
       <a
         className="btn btn-danger btn-block"
         href="https://capecodstemnetwork.org/submit-an-event"
+        target="_blank"
       >
         Add Your Event!
       </a>

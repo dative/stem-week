@@ -1,0 +1,79 @@
+@import 'scss/colors.scss';
+@import 'scss/fonts.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+.event-list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin-top: 2px;
+  padding: 1.25rem 1rem;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: .8rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    a.learn-more {
+      margin-top: auto;
+      justify-self: flex-end;
+      font-family: $font-family-monospace;
+      font-weight: 600;
+      font-size: .8rem;
+      color: $red;
+      letter-spacing: 0;
+      line-height: 22px;
+
+      svg {
+        font-size: .7rem;
+      }
+    }
+  }
+
+  aside {
+    align-self: center;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-family: $font-family-sans-serif;
+        font-weight: 500;
+        font-size: .8rem;
+        color: #242E4D;
+        letter-spacing: 0;
+        line-height: 20px;
+        margin: .2rem 0;
+
+        svg {
+          font-size: 14px;
+          margin-right:.4rem;
+          color: $red;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 20%;
+    }
+  }
+}

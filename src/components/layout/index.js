@@ -2,8 +2,6 @@ import React from 'react'
 import emergence from 'emergence.js'
 
 import Header from 'components/header'
-import EventsViewer from 'components/eventsViewer'
-import Sidebar from 'components/sidebar'
 import { siteMetadata } from '../../../gatsby-config'
 
 import 'modern-normalize/modern-normalize.css'
@@ -26,16 +24,7 @@ class Layout extends React.Component {
     return (
       <div>
         <Header title={siteMetadata.title} {...this.props} />
-        <div className="container main-container">
-          <div className="row">
-            <div className="col-12 col-lg-9">
-              <EventsViewer />
-            </div>
-            <div className="col-12 col-lg-3">
-              <Sidebar />
-            </div>
-          </div>
-        </div>
+        {children}
       </div>
     )
   }
