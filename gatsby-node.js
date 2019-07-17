@@ -1,14 +1,16 @@
 const path = require('path')
-const axios = require('axios');
-const crypto = require('crypto');
+const axios = require('axios')
+const crypto = require('crypto')
+const webpack = require('webpack')
 
 exports.sourceNodes = async ({ actions }) => {
-  const { createNode } = actions;
+  const { createNode } = actions
 
   // fetch raw data from the randomuser api
-  const fetchEvents = () => axios.get(`https://capecodstemnetwork.org/communityEvents.json`);
+  const fetchEvents = () =>
+    axios.get(`https://capecodstemnetwork.org/communityEvents.json`)
   // await for results
-  const res = await fetchEvents();
+  const res = await fetchEvents()
 
   res.data.data.map((event, i) => {
     // Create your node object
@@ -39,30 +41,61 @@ exports.sourceNodes = async ({ actions }) => {
       hostedBy: event.hostedBy,
       eventUrl: event.eventUrl,
       openToThePublic: event.openToThePublic,
+      geolocation: event.geolocation,
     }
 
     // Get content digest of node. (Required field)
     const contentDigest = crypto
       .createHash(`md5`)
       .update(JSON.stringify(eventNode))
-      .digest(`hex`);
+      .digest(`hex`)
     // add it to eventNode
-    eventNode.internal.contentDigest = contentDigest;
+    eventNode.internal.contentDigest = contentDigest
 
     // Create node with the gatsby createNode() API
-    createNode(eventNode);
-  });
-  return;
+    createNode(eventNode)
+  })
+  return
 }
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: require.resolve('bootstrap'),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve('jquery'),
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
   actions.setWebpackConfig({
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
-        templates: path.resolve(__dirname, 'src/templates'),
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: 'popper.js',
+        Bootstrap: 'bootstrap.js',
+      }),
+    ],
   })
 }
