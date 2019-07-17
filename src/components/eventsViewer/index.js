@@ -78,7 +78,7 @@ class EventsViewer extends React.Component {
                 selectedEvent={this.state.selectedEvent}
                 onClick={this.onMarkerClick}
                 events={events}
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDQGsNp_VBLnfrcgiBuji1D65R6G2565J8`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={
                   <div
