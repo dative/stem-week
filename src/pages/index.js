@@ -12,7 +12,6 @@ class PageIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: false,
       events: [],
     }
   }
@@ -22,14 +21,13 @@ class PageIndex extends React.Component {
   }
 
   fetchEvents = async () => {
-    this.setState({ loading: true })
     // fetch raw data from the randomuser api
     const fetchEvents = () =>
       axios.get(`https://capecodstemnetwork.org/communityEvents.json`)
     // await for results
     const res = await fetchEvents()
     res.data.data
-    this.setState({ loading: false, events: res.data.data })
+    this.setState({ events: res.data.data })
   }
 
   render() {
@@ -38,18 +36,14 @@ class PageIndex extends React.Component {
       <Layout location={location}>
         <Meta site={get(data, 'site.meta')} />
         <div className="container main-container">
-          {this.state.loading ? (
-            <div>Loading</div>
-          ) : (
-            <div className="row">
-              <div className="col-12 col-lg-9">
-                <EventsViewer events={get(data, 'allCommunityEvent.edges')} />
-              </div>
-              <div className="col-12 col-lg-3">
-                <Sidebar />
-              </div>
+          <div className="row">
+            <div className="col-12 col-lg-9">
+              <EventsViewer events={get(data, 'allCommunityEvent.edges')} />
             </div>
-          )}
+            <div className="col-12 col-lg-3">
+              <Sidebar />
+            </div>
+          </div>
         </div>
       </Layout>
     )
