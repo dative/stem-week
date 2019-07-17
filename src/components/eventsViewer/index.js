@@ -106,8 +106,10 @@ class EventsViewer extends React.Component {
                     events
                       .filter(
                         item =>
-                          item.node.geolocation ===
-                          this.state.selectedEvent.node.geolocation
+                          item.node.geolocation.lat ===
+                            this.state.selectedEvent.node.geolocation.lat &&
+                          item.node.geolocation.lng ===
+                            this.state.selectedEvent.node.geolocation.lng
                       )
                       .map((item, index) => (
                         <EventListItem
