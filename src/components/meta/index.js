@@ -24,6 +24,7 @@ const Meta = ({ site, title }) => {
           content: `${get(site, 'siteUrl')}/img/profile.jpg`,
         },
       ]}
+      htmlAttributes={{ lang: 'en' }}
     />
   )
 }

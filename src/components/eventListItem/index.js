@@ -31,6 +31,7 @@ const EventListItem = ({
             href={r.test(eventUrl) ? eventUrl : `http://${eventUrl}`}
             target="_blank"
             className="learn-more"
+            rel="noreferrer"
           >
             Learn more <FontAwesomeIcon icon={faArrowRight} />
           </a>

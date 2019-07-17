@@ -37,33 +37,25 @@ class EventsViewer extends React.Component {
       <div className="events-viewer">
         <nav className="events-viewer--nav" id="viewerTab" role="tablist">
           <button
-            id="list-tab"
-            className={`${this.state.activeTab === 'list' && 'active'}`}
-            aria-controls="list"
             aria-selected={this.state.activeTab === 'list'}
             onClick={this.onTabClick}
             value="list"
+            role="tab"
           >
             <FontAwesomeIcon icon={faList} /> List View
           </button>
           <button
-            id="map-tab"
-            className={`${this.state.activeTab === 'map' && 'active'}`}
-            aria-controls="map"
             aria-selected={this.state.activeTab === 'map'}
             onClick={this.onTabClick}
             value="map"
+            role="tab"
           >
             <FontAwesomeIcon icon={faMap} /> Map View
           </button>
         </nav>
         <div className="tab-content" id="myTabContent">
           {this.state.activeTab === 'list' && (
-            <div
-              className="events-viewer--event-list"
-              role="tabpanel"
-              aria-labelledby="list-tab"
-            >
+            <div className="events-viewer--event-list" role="tabpanel">
               {events &&
                 events.length > 0 &&
                 events.map((item, index) => (
@@ -73,7 +65,7 @@ class EventsViewer extends React.Component {
           )}
 
           {this.state.activeTab === 'map' && (
-            <div role="tabpanel" aria-labelledby="map-tab">
+            <div role="tabpanel">
               <Map
                 selectedEvent={this.state.selectedEvent}
                 onClick={this.onMarkerClick}

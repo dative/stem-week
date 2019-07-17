@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-bootstrap",
-  "description": "Simple starter for Gatsby",
-  "version": "2.0.1",
-  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
+  "name": "gatsby-stem-week",
+  "description": "Cape Cod STEM Week",
+  "version": "1.0.0",
+  "author": "Rodrigo Passos <rodrigo@hellodative.com>",
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/pro-light-svg-icons": "^5.9.0",

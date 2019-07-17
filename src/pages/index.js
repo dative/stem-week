@@ -34,7 +34,7 @@ class PageIndex extends React.Component {
     const { data, location } = this.props
     return (
       <Layout location={location}>
-        <Meta site={get(data, 'site.meta')} />
+        <Meta site={get(data, 'site.siteMetadata')} />
         <div className="container main-container">
           <div className="row">
             <div className="col-12 col-lg-9">

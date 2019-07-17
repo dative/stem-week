@@ -34,13 +34,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Cape Cod STEM Week ',
+        short_name: 'StemWeek',
+        description:
+          'Focus on STEM education during week in October aimed at sparking student interest and knowledge.',
+        homepage_url: 'https://capecodstemweek.org',
         start_url: '/',
-        background_color: '#fff',
-        theme_color: '#673ab7',
+        background_color: '#3f51b5',
+        theme_color: '#3f51b5',
         display: 'standalone',
         icons: [
           {

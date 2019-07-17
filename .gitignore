@@ -6,3 +6,4 @@ public
 .cache/
 .vscode/
 .env.*
+netlify.toml
