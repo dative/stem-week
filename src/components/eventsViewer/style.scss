@@ -60,6 +60,7 @@
       button {
         @extend .btn;
         @include button-variant($red, #fff);
+        border-radius: 0;
       }
     }
   }

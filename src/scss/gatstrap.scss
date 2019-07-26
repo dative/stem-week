@@ -18,18 +18,22 @@ $theme-colors: (
   danger: $red,
   light: $gray-100,
   dark: $gray-800,
-) !default;
+);
 
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-rounded: false !default;
-$enable-shadows: true !default;
-$enable-gradients: false !default;
-$enable-transitions: false !default;
-$enable-hover-media-query: false !default;
-$enable-grid-classes: true !default;
-$enable-print-styles: true !default;
+$enable-rounded: false;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: false;
+$enable-hover-media-query: false;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
 
 // Grid containers
 //
@@ -39,31 +43,33 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px
-) !default;
+);
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
-$body-color: $gray-700 !default;
-$inverse-bg: $gray-900 !default;
-$inverse-color: $gray-600 !default;
+$body-bg: $white;
+$body-color: $gray-700;
+$inverse-bg: $gray-900;
+$inverse-color: $gray-600;
 
 // Links
 //
 // Style anchor elements.
-$link-decoration: none !default;
-$link-hover-decoration: none !default;
+$link-decoration: none;
+$link-hover-decoration: none;
 
 // Fonts
 //
 @import './fonts.scss';
 
+// @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
 html,
 body {
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   background-color: #f0f0f0;

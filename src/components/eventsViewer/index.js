@@ -42,7 +42,7 @@ class EventsViewer extends React.Component {
             value="list"
             role="tab"
           >
-            <FontAwesomeIcon icon={faList} /> List View
+            <FontAwesomeIcon icon={faList} /> List
           </button>
           <button
             aria-selected={this.state.activeTab === 'map'}
@@ -50,7 +50,7 @@ class EventsViewer extends React.Component {
             value="map"
             role="tab"
           >
-            <FontAwesomeIcon icon={faMap} /> Map View
+            <FontAwesomeIcon icon={faMap} /> Map
           </button>
         </nav>
         <div className="tab-content" id="myTabContent">

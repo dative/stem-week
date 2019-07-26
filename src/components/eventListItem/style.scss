@@ -18,38 +18,64 @@
     margin-top: 0;
   }
 
+  &--picture {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      max-width: 118px;
+      margin-right: 1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+
   &--content {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
     h3 {
       font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #495057;
     }
 
     p {
-      font-size: .8rem;
+      &.hostedBy {
+        font-style: italic;
+        font-size: .8rem;
+      }
+      font-size: .9rem;
       margin-bottom: 1rem;
       line-height: 1;
     }
 
-    a.learn-more {
+    .contact-info {
       margin-top: auto;
-      justify-self: flex-end;
-      font-family: $font-family-monospace;
-      font-weight: 600;
-      font-size: .8rem;
+      margin-bottom: 0;
       color: $red;
-      letter-spacing: 0;
-      line-height: 22px;
+      font-family: $font-family-monospace;
+      font-weight: 500;
+      font-size: .8rem;
 
-      svg {
-        font-size: .7rem;
+      a {
+        color: $red;
       }
     }
+
   }
 
   aside {
-    align-self: center;
+    margin-top: 1rem;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+      margin-left: 1rem;
+      align-self: center;
+    }
     ul {
       list-style: none;
       margin: 0;
@@ -70,6 +96,13 @@
           color: $red;
         }
       }
+    }
+
+    a.btn {
+      font-family: $font-family-monospace;
+      border-radius: 0;
+      box-shadow: none;
+      margin-top: 1rem;
     }
 
     @include media-breakpoint-up(lg) {
