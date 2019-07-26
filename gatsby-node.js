@@ -25,6 +25,7 @@ exports.sourceNodes = async ({ actions }) => {
 
       // Other fields that you want to query with graphQl
       title: event.title,
+      summary: event.summary,
       slug: event.slug,
       startDate: event.startDate,
       endDate: event.endDate,
@@ -42,6 +43,13 @@ exports.sourceNodes = async ({ actions }) => {
       eventUrl: event.eventUrl,
       openToThePublic: event.openToThePublic,
       geolocation: event.geolocation,
+      contact: {
+        name: event.contact.name,
+        organization: event.contact.organization,
+        email: event.contact.email,
+        phone: event.contact.phone,
+      },
+      picture: event.picture,
     }
 
     // Get content digest of node. (Required field)

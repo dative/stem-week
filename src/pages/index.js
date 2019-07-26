@@ -88,6 +88,14 @@ export const pageQuery = graphql`
             lat
             lng
           }
+          summary
+          contact {
+            email
+            name
+            organization
+            phone
+          }
+          picture
         }
       }
     }
