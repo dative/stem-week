@@ -5,6 +5,6 @@ public
 .intermediate-representation/
 .cache/
 .vscode/
-.env
+.envrc
 .env.*
 netlify.toml
