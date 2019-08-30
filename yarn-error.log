@@ -1,14 +1,14 @@
 Arguments: 
-  /Users/rodrigopassos/.nvm/versions/node/v11.10.1/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js
+  /Users/rodrigopassos/.nvm/versions/node/v10.16.3/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js
 
 PATH: 
-  /Users/rodrigopassos/.nvm/versions/node/v11.10.1/bin:/Users/rodrigopassos/Library/Android/sdk/platform-tools:/Users/rodrigopassos/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Applications/Wireshark.app/Contents/MacOS:/Users/rodrigopassos/.composer/vendor/bin
+  /Users/rodrigopassos/.nvm/versions/node/v10.16.3/bin:/Users/rodrigopassos/Library/Android/sdk/platform-tools:/Users/rodrigopassos/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Applications/Wireshark.app/Contents/MacOS:/Users/rodrigopassos/.composer/vendor/bin
 
 Yarn version: 
   1.15.2
 
 Node version: 
-  11.10.1
+  10.16.3
 
 Platform: 
   darwin x64
