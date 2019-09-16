@@ -42,7 +42,7 @@ const EventListItem = ({
             <h3>{title}</h3>
           ))}
         {hostedBy && <p className="hostedBy">Hosted By {hostedBy}</p>}
-        {summary && <p>Hosted By {summary}</p>}
+        {summary && <p>{summary}</p>}
         {contact && (
           <div className="contact-info">
             Contact: {contact.name}{' '}
