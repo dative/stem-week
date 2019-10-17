@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
-import axios from 'axios'
 
 import Meta from 'components/meta'
 import Layout from 'components/layout'
@@ -9,27 +8,6 @@ import EventsViewer from 'components/eventsViewer'
 import Sidebar from 'components/sidebar'
 
 class PageIndex extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      events: [],
-    }
-  }
-
-  componentDidMount() {
-    this.fetchEvents()
-  }
-
-  fetchEvents = async () => {
-    // fetch raw data from the randomuser api
-    const fetchEvents = () =>
-      axios.get(`https://capecodstemnetwork.org/communityEvents.json`)
-    // await for results
-    const res = await fetchEvents()
-    res.data.data
-    this.setState({ events: res.data.data })
-  }
-
   render() {
     const { data, location } = this.props
     return (
