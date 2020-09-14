@@ -13,6 +13,7 @@ class PageIndex extends React.Component {
     super(props)
     this.state = {
       events: [],
+      isLoading: true,
     }
   }
 
@@ -24,7 +25,7 @@ class PageIndex extends React.Component {
 
       const json = await response.json()
 
-      this.setState({ events: json.data })
+      this.setState({ events: json.data, isLoading: false })
     } catch (e) {
       console.log('Error: ', e)
     }
@@ -39,10 +40,10 @@ class PageIndex extends React.Component {
         <div className="container main-container">
           <div className="row">
             <div className="col-12 col-lg-9">
-              {this.state.events.length > 0 ? (
-                <EventsViewer events={this.state.events} />
-              ) : (
+              {this.state.isLoading ? (
                 <EventsLoading />
+              ) : (
+                <EventsViewer events={this.state.events} />
               )}
             </div>
             <div className="col-12 col-lg-3">
