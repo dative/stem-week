@@ -91,7 +91,7 @@ const EventListItem = ({
             className="btn btn-danger btn-sm btn-block"
             rel="noreferrer"
           >
-            Learn more
+            Sign Up
           </a>
         )}
       </aside>

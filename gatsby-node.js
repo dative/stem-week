@@ -42,7 +42,6 @@ exports.sourceNodes = async ({ actions }) => {
       hostedBy: `${event.hostedBy}`,
       eventUrl: `${event.eventUrl}`,
       openToThePublic: `${event.openToThePublic}`,
-      geolocation: event.geolocation,
       contact: {
         name: `${event.contact.name}`,
         organization: `${event.contact.organization}`,
