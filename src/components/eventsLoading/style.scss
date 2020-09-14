@@ -1,0 +1,15 @@
+@import 'scss/colors.scss';
+@import 'scss/fonts.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/buttons';
+
+.events-loading {
+  background-color: #f0f0f0;
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #E04342;
+}

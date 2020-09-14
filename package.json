@@ -43,7 +43,7 @@
     "@fortawesome/react-fontawesome": "0.1.4",
     "animate.css": "3.7.2",
     "babel-eslint": "10.0.2",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.5.2",
     "emergence.js": "1.1.2",
     "eslint": "6.0.1",
     "eslint-config-prettier": "6.0.0",

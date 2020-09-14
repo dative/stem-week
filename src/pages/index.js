@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Meta from 'components/meta'
 import Layout from 'components/layout'
 import EventsViewer from 'components/eventsViewer'
+import EventsLoading from 'components/eventsLoading'
 import Sidebar from 'components/sidebar'
 
 class PageIndex extends React.Component {
@@ -38,7 +39,11 @@ class PageIndex extends React.Component {
         <div className="container main-container">
           <div className="row">
             <div className="col-12 col-lg-9">
-              <EventsViewer events={this.state.events} />
+              {this.state.events.length > 0 ? (
+                <EventsViewer events={this.state.events} />
+              ) : (
+                <EventsLoading />
+              )}
             </div>
             <div className="col-12 col-lg-3">
               <Sidebar />

@@ -1,10 +1,7 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList, faMap, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import './style.scss'
 
 import EventListItem from '../eventListItem'
-import Map from '../map'
 
 class EventsViewer extends React.Component {
   constructor(props) {
